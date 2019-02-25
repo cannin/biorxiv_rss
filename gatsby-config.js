@@ -60,6 +60,7 @@ module.exports = {
               return items.map((item, i) => {
                 return Object.assign({}, {
                   title: item.node.title,
+                  author: item.node.authors,
                   description: item.node.abstract,
                   date: item.node.first_posted,
                   url: item.node.biorxiv_url,
