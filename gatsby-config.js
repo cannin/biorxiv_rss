@@ -49,13 +49,18 @@ module.exports = {
               let startDate = new Date();
               startDate.setDate(startDate.getDate() - 30);
 
+              let endDate = new Date();
+              endDate.setDate(endDate.getDate() - 29);
+
               items = items.filter( item => {
                 const date = new Date(item.node.first_posted);
-                return (date >= startDate);
+                return (date >= startDate && date <= endDate);
               });
 
               items = items.reverse();
-              items = items.slice(0, 2);
+              if(items.length > 5) {
+                items = items.slice(0, 5);
+              }
 
               return items.map((item, i) => {
                 return Object.assign({}, {
