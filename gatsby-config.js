@@ -65,7 +65,7 @@ module.exports = {
                   date: item.node.first_posted,
                   url: item.node.biorxiv_url,
                   guid: item.node.biorxiv_url,
-                  custom_elements: [{ "content:encoded": 'UTF-8' }],
+                  custom_elements: [{ "content:encoded": item.node.abstract }],
                 })
               })
             },
