@@ -40,8 +40,8 @@ const IndexPage = (props) => {
 
         return (
           <div key={i}>
-            <h1><a href={dat.biorxiv_url}>{dat.title}</a></h1>
-            <h3>{authors_str}</h3>
+            <h2><a href={dat.biorxiv_url}>{dat.title}</a></h2>
+            <h4>{authors_str}</h4>
             <p>Posted: {dat.first_posted}, Category: {dat.category}, Downloads: {dat.downloads}</p>
             <p>{dat.abstract}</p>
           </div>
