@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `bioRxiv Feed`,
-    description: `Highly accessed bioRxiv articles from the past week.`,
+    description: `Highly accessed bioRxiv articles`,
     author: `Augustin Luna`,
   },
   plugins: [

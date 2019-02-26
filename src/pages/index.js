@@ -28,21 +28,21 @@ const IndexPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Home" keywords={[`biorxiv`, `bioinformatics`, `systems biology`, `cancer biology`]} />
       {items.map((item, i) => {
         const dat = item.node;
 
         let authors_str = dat.authors;
 
-        if(authors_str.length > 100) {
-          authors_str = authors_str.substr(0, 100) + '...'
+        if(authors_str.length > 70) {
+          authors_str = authors_str.substr(0, 70) + '...'
         }
 
         return (
           <div key={i}>
             <h1><a href={dat.biorxiv_url}>{dat.title}</a></h1>
-            <p>{authors_str}</p>
-            <p>First Posted: {dat.first_posted}, Category: {dat.category}, Downloads: {dat.downloads}</p>
+            <h3>{authors_str}</h3>
+            <p>Posted: {dat.first_posted}, Category: {dat.category}, Downloads: {dat.downloads}</p>
             <p>{dat.abstract}</p>
           </div>
         )
