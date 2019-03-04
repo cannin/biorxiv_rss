@@ -34,29 +34,34 @@ const Header = ({ siteMetadata }) => (
         textDecoration: `none`,
         paddingTop: 10
       }}>
-        <span>
-          <a
-            className={'icon'}
-            href={ "https://twitter.com/intent/tweet?source=" + siteMetadata.link +
-            "&text=" + siteMetadata.title + ": " + siteMetadata.description +
-            "&via=" + siteMetadata.twitter_username }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitterSquare />
-          </a>
-        </span>
-        <span>
-          <a
-            className={'icon'}
-            href={ "https://www.facebook.com/sharer/sharer.php?u=" + siteMetadata.link +
-            "&quote=" + siteMetadata.title + ": " + siteMetadata.description }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebookSquare />
-          </a>
-        </span>
+        <a
+          className={'icon'}
+          href={ "https://twitter.com/intent/tweet?source=" + siteMetadata.link +
+          "&text=" + siteMetadata.title + ": " + siteMetadata.description +
+          "&via=" + siteMetadata.twitter_username }
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaTwitterSquare />
+        </a>
+        <a
+          className={'icon'}
+          href={ "https://www.facebook.com/sharer/sharer.php?u=" + siteMetadata.link +
+          "&quote=" + siteMetadata.title + ": " + siteMetadata.description }
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaFacebookSquare />
+        </a>
+        <a
+          className={'icon'}
+          href={ "mailto:?subject=" + siteMetadata.title +
+          "&body=" + siteMetadata.title + ": " + siteMetadata.description }
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaEnvelopeSquare />
+        </a>
       </h2>
     </div>
   </header>
