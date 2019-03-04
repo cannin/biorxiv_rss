@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import { FaRssSquare } from "react-icons/fa"
+import { FaRssSquare, FaFacebookSquare, FaTwitterSquare } from "react-icons/fa"
 
 import Header from "./header"
 import "./layout.css"
@@ -35,7 +35,8 @@ const Layout = ({ children }) => (
           <main>{children}</main>
           <footer>
             Presented each day are the top 5 downloaded <a href="https://www.biorxiv.org">bioRxiv</a> articles from 30 days ago aggregated over the following categories: { data.site.siteMetadata.biorxiv_categories.join(', ') } <br/>
-            Copyright: {new Date().getFullYear()}. Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://rxivist.org">Rxivist</a>. <a href="rss.xml"><FaRssSquare /> RSS Feed</a>
+            Copyright: {new Date().getFullYear()}. Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://rxivist.org">Rxivist</a>. <a href="rss.xml"><FaRssSquare /> RSS Feed</a> <br/>
+            <a href="rss.xml"><FaFacebookSquare /> RSS Feed</a> <a href="rss.xml"><FaTwitterSquare /> RSS Feed</a>
           </footer>
         </div>
       </>
