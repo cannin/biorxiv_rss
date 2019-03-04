@@ -34,46 +34,40 @@ const Header = ({ siteMetadata }) => (
         textDecoration: `none`,
         paddingTop: 10
       }}>
-        <a
-          href={ "https://twitter.com/intent/tweet?source=" + siteMetadata.link +
-          "&text=" + siteMetadata.title + ": " + siteMetadata.description +
-          "&via=" + siteMetadata.twitter_username }
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-            paddingRight: 10,
-          }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaTwitterSquare />
-        </a>
-        <a
-          href={ "https://www.facebook.com/sharer/sharer.php?u=" + siteMetadata.link +
-          "&quote=" + siteMetadata.title + ": " + siteMetadata.description }
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-            paddingRight: 10,
-          }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaFacebookSquare />
-        </a>
-        <a
-          href={ "mailto:?subject=" + siteMetadata.title +
-          "&body=" + siteMetadata.title + ": " + siteMetadata.description }
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-            paddingRight: 10,
-          }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaEnvelopeSquare />
-        </a>
+        <span>
+          <a
+            className={'icon'}
+            href={ "https://twitter.com/intent/tweet?source=" + siteMetadata.link +
+            "&text=" + siteMetadata.title + ": " + siteMetadata.description +
+            "&via=" + siteMetadata.twitter_username }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitterSquare />
+          </a>
+        </span>
+        <span>
+          <a
+            className={'icon'}
+            href={ "https://www.facebook.com/sharer/sharer.php?u=" + siteMetadata.link +
+            "&quote=" + siteMetadata.title + ": " + siteMetadata.description }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookSquare />
+          </a>
+        </span>
+        <span>
+          <a
+            className={'icon'}
+            href={ "mailto:?subject=" + siteMetadata.title +
+            "&body=" + siteMetadata.title + ": " + siteMetadata.description }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaEnvelopeSquare />
+          </a>
+        </span>
       </h2>
     </div>
   </header>

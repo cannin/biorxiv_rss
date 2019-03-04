@@ -633,3 +633,9 @@ footer {
   border-top: 1px solid darkgrey;
   padding-top: 1.45rem;
 }
+
+.icon {
+  color: white;
+  text-decoration: none;
+  padding-right: 10px;
+}
