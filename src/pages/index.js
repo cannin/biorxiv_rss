@@ -71,7 +71,7 @@ const IndexPage = (props) => {
     items = items.slice(0, 5);
   }
 
-  items = [];
+  //items = [];
   //console.log(items.length);
 
   return (
