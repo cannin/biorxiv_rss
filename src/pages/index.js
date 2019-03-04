@@ -11,9 +11,6 @@ const Papers = (props) => {
 
   const hasItems = (items.length > 0) ? true : false;
 
-  //const a = _.every([2, 4, 5], function(num) { return num % 2 === 0; });
-  //console.log(a);
-
   if (hasItems) {
     return (
       items.map((item, i) => {

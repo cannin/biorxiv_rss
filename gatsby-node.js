@@ -1,6 +1,6 @@
 const axios = require("axios");
 const crypto = require("crypto");
-const _ = require("underscore");
+const gatsby = require("gatsby");
 
 const categories = [
   'biochemistry', 'bioinformatics', 'biophysics',
@@ -8,7 +8,11 @@ const categories = [
   'genetics', 'genomics', 'immunology',
   'molecular-biology', 'pharmacology-and-toxicology', 'systems-biology'];
 
-const category_str = categories.join('&category=')
+const category_str = categories.join('&category=');
+
+function pluck(array, key) {
+  return array.map(o => o[key]);
+}
 
 // https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=lastmonth&category=biochemistry&category=bioinformatics&category=biophysics&category=cancer-biology&category=cell-biology&category=clinical-trials&category=genetics&category=genomics&category=immunology&category=molecular-biology&category=pharmacology-and-toxicology&category=systems-biology
 
@@ -22,7 +26,7 @@ exports.sourceNodes = ({ actions }) => {
       // map into these results and create nodes
       res.data.results.map((item, i) => {
 
-        let authors = _.pluck(item.authors, 'name');
+        let authors = pluck(item.authors, 'name');
         authors = authors.join(', ');
 
         // Create your node object

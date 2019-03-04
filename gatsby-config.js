@@ -3,6 +3,11 @@ module.exports = {
     title: `bioRxiv Feed`,
     description: `Highly accessed bioRxiv articles`,
     author: `Augustin Luna`,
+    biorxiv_categories: [
+      'biochemistry', 'bioinformatics', 'biophysics',
+      'cancer-biology', 'cell-biology', 'clinical-trials',
+      'genetics', 'genomics', 'immunology',
+      'molecular-biology', 'pharmacology-and-toxicology', 'systems-biology']
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

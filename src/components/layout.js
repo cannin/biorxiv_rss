@@ -13,6 +13,7 @@ const Layout = ({ children }) => (
           siteMetadata {
             title
             description
+            biorxiv_categories
           }
         }
       }
@@ -30,7 +31,7 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <footer>
-            Each day top 5 bioinformatics downloaded bioRxiv articles from 30 days ago.<br/>
+            Presented each day are the top 5 downloaded <a href="https://www.biorxiv.org">bioRxiv</a> articles from 30 days ago aggregated over the following categories: { data.site.siteMetadata.biorxiv_categories.join(', ') } <br/>
             Copyright: {new Date().getFullYear()}. Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://rxivist.org">Rxivist</a><br/>
             <a href="rss.xml">RSS Feed</a>
           </footer>
