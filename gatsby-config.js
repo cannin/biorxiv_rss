@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `bioRxiv Feed`,
-    description: `Highly accessed bioRxiv articles`,
+    title: `Awesome bioRxiv`,
+    description: `Highly accessed articles`,
     author: `Augustin Luna`,
+    link: `https://biorxiv.lunean.com`,
+    twitter_username: `canninl`,
     biorxiv_categories: [
       'biochemistry', 'bioinformatics', 'biophysics',
       'cancer-biology', 'cell-biology', 'clinical-trials',

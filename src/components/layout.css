@@ -630,5 +630,6 @@ pre tt:after {
 }
 
 footer {
-    border-top: 1px solid darkgrey;
+  border-top: 1px solid darkgrey;
+  padding-top: 1.45rem;
 }
