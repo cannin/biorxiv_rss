@@ -90,6 +90,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        siteImage
       }
     }
   }

@@ -15,7 +15,7 @@ const Layout = ({ children }) => (
             title
             description
             biorxiv_categories
-            link
+            siteUrl
             twitter_username
           }
         }
@@ -33,7 +33,7 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
+          <footer name="footer">
             Presented each day are the top 5 downloaded <a href="https://www.biorxiv.org">bioRxiv</a> articles from 30 days ago aggregated over the following categories: { data.site.siteMetadata.biorxiv_categories.join(', ') } <br/>
             Copyright: {new Date().getFullYear()}. Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://rxivist.org">Rxivist</a>. <a href="rss.xml"><FaRssSquare /> RSS Feed</a>. <br/>
           </footer>

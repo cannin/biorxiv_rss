@@ -7,7 +7,7 @@ import Image from "../components/image"
 
 const Papers = (props) => {
   let items = props.items;
-  console.log(JSON.stringify(props));
+  //console.log(JSON.stringify(props));
 
   const hasItems = (items.length > 0) ? true : false;
 
@@ -17,7 +17,7 @@ const Papers = (props) => {
         const dat = item.node;
 
         let authors_str = dat.authors;
-        const max_char = 100;
+        const max_char = 90;
         //authors_str = _.prune(authors_str, max_char, ', ...');
         //console.log(authors_str);
 
@@ -33,8 +33,8 @@ const Papers = (props) => {
         return (
           <div key={i}>
             <h2><a href={dat.biorxiv_url}>{dat.title}</a></h2>
-            <h4>{authors_str}</h4>
-            <p>Posted: {dat.first_posted}, Category: {dat.category}, Downloads: {dat.downloads}</p>
+            <h3>{authors_str}</h3>
+            <h4>Posted: {dat.first_posted}, Category: {dat.category}, Downloads: {dat.downloads}</h4>
             <p>{dat.abstract}</p>
           </div>
         )

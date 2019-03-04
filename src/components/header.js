@@ -26,7 +26,7 @@ const Header = ({ siteMetadata }) => (
             textDecoration: `none`,
           }}
         >
-          {siteMetadata.title + ": " + siteMetadata.description}
+          {siteMetadata.title}<br/>{siteMetadata.description}
         </Link>
       </h1>
       <h2 style={{
@@ -36,9 +36,9 @@ const Header = ({ siteMetadata }) => (
       }}>
         <a
           className={'icon'}
-          href={ "https://twitter.com/intent/tweet?source=" + siteMetadata.link +
+          href={ "https://twitter.com/intent/tweet?source=" + siteMetadata.siteUrl +
           "&text=" + siteMetadata.title + ": " + siteMetadata.description +
-          "&via=" + siteMetadata.twitter_username }
+          "&via=" + siteMetadata.twitter_username + " " + siteMetadata.siteUrl }
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -46,8 +46,8 @@ const Header = ({ siteMetadata }) => (
         </a>
         <a
           className={'icon'}
-          href={ "https://www.facebook.com/sharer/sharer.php?u=" + siteMetadata.link +
-          "&quote=" + siteMetadata.title + ": " + siteMetadata.description }
+          href={ "https://www.facebook.com/sharer/sharer.php?u=" + siteMetadata.siteUrl +
+          "&quote=" + siteMetadata.title + ": " + siteMetadata.description + " " + siteMetadata.siteUrl }
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -56,7 +56,7 @@ const Header = ({ siteMetadata }) => (
         <a
           className={'icon'}
           href={ "mailto:?subject=" + siteMetadata.title +
-          "&body=" + siteMetadata.title + ": " + siteMetadata.description }
+          "&body=" + siteMetadata.title + ": " + siteMetadata.description + " " + siteMetadata.siteUrl }
           target="_blank"
           rel="noopener noreferrer"
         >
