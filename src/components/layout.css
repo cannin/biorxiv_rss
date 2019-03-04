@@ -623,3 +623,8 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+/* OTHER */
+.error {
+  text-align: center;
+}
