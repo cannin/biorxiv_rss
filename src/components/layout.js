@@ -14,6 +14,7 @@ const Layout = ({ children }) => (
           siteMetadata {
             title
             description
+            longDescription
             biorxiv_categories
             siteUrl
             twitter_username

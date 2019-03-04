@@ -37,7 +37,7 @@ const Header = ({ siteMetadata }) => (
         <a
           className={'icon'}
           href={ "https://twitter.com/intent/tweet?source=" + siteMetadata.siteUrl +
-          "&text=" + siteMetadata.title + ": " + siteMetadata.description +
+          "&text=" + siteMetadata.title + ": " + siteMetadata.longDescription +
           "&via=" + siteMetadata.twitter_username + " " + siteMetadata.siteUrl }
           target="_blank"
           rel="noopener noreferrer"
@@ -47,7 +47,7 @@ const Header = ({ siteMetadata }) => (
         <a
           className={'icon'}
           href={ "https://www.facebook.com/sharer/sharer.php?u=" + siteMetadata.siteUrl +
-          "&quote=" + siteMetadata.title + ": " + siteMetadata.description + " " + siteMetadata.siteUrl }
+          "&quote=" + siteMetadata.title + ": " + siteMetadata.longDescription + " " + siteMetadata.siteUrl }
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -56,7 +56,7 @@ const Header = ({ siteMetadata }) => (
         <a
           className={'icon'}
           href={ "mailto:?subject=" + siteMetadata.title +
-          "&body=" + siteMetadata.title + ": " + siteMetadata.description + " " + siteMetadata.siteUrl }
+          "&body=" + siteMetadata.title + ": " + siteMetadata.longDescription + " " + siteMetadata.siteUrl }
           target="_blank"
           rel="noopener noreferrer"
         >
