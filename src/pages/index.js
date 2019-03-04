@@ -56,10 +56,10 @@ const IndexPage = (props) => {
   let items = props.data.allBiorxivPaper.edges;
 
   let startDate = new Date();
-  startDate.setDate(startDate.getDate() - 30);
+  startDate.setDate(startDate.getDate() - 31);
 
   let endDate = new Date();
-  endDate.setDate(endDate.getDate() - 29);
+  endDate.setDate(endDate.getDate() - 30);
 
   items = items.filter( item => {
     const date = new Date(item.node.first_posted);

@@ -29,6 +29,11 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
+          <footer>
+            Each day top 5 bioinformatics downloaded bioRxiv articles from 30 days ago.<br/>
+            Copyright: {new Date().getFullYear()}. Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://rxivist.org">Rxivist</a><br/>
+            <a href="rss.xml">RSS Feed</a>
+          </footer>
         </div>
       </>
     )}
@@ -41,8 +46,3 @@ Layout.propTypes = {
 
 export default Layout
 
-// <footer>
-//             © {new Date().getFullYear()}, Built with
-//   {` `}
-// <a href="https://www.gatsbyjs.org">Gatsby</a>
-// </footer>
