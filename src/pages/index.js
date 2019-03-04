@@ -66,7 +66,7 @@ const IndexPage = (props) => {
     return (date >= startDate && date <= endDate);
   });
 
-  items = items.reverse();
+  //items = items.reverse();
   if(items.length > 5) {
     items = items.slice(0, 5);
   }
