@@ -37,17 +37,6 @@ const Header = ({ siteMetadata }) => (
         <span>
           <a
             className={'icon'}
-            href={ "mailto:?subject=" + siteMetadata.title +
-            "&body=" + siteMetadata.title + ": " + siteMetadata.description }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaEnvelopeSquare />
-          </a>
-        </span>
-        <span>
-          <a
-            className={'icon'}
             href={ "https://twitter.com/intent/tweet?source=" + siteMetadata.link +
             "&text=" + siteMetadata.title + ": " + siteMetadata.description +
             "&via=" + siteMetadata.twitter_username }
