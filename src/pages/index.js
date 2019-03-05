@@ -1,4 +1,5 @@
 import React from "react"
+import ReactGA from 'react-ga'
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -6,6 +7,15 @@ import SEO from "../components/seo"
 import Image from "../components/image"
 
 const Papers = (props) => {
+  const onItemClick = (biorxiv_url) => {
+    console.log('debug: ' + JSON.stringify(biorxiv_url));
+
+    ReactGA.event({
+      category: 'link',
+      action: biorxiv_url
+    })
+  };
+
   let items = props.items;
   //console.log(JSON.stringify(props));
 
@@ -32,7 +42,12 @@ const Papers = (props) => {
 
         return (
           <div key={i}>
-            <h2><a href={dat.biorxiv_url}>{dat.title}</a></h2>
+            <h2><a onClick={() => onItemClick(dat.biorxiv_url)}
+                   href={dat.biorxiv_url}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                >{dat.title}</a>
+            </h2>
             <h3>{authors_str}</h3>
             <h4>Posted: {dat.first_posted}, Category: {dat.category}, Downloads: {dat.downloads}</h4>
             <p>{dat.abstract}</p>
