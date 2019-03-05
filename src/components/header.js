@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import { FaTwitterSquare, FaFacebookSquare, FaEnvelopeSquare } from 'react-icons/fa';
 
+import onLinkClick from "../components/onLinkClick"
+
 const Header = ({ siteMetadata }) => (
   <header
     style={{
@@ -35,6 +37,7 @@ const Header = ({ siteMetadata }) => (
         paddingTop: 10
       }}>
         <a
+          onClick={() => onLinkClick('twitter')}
           className={'icon'}
           href={ "https://twitter.com/intent/tweet?source=" + siteMetadata.siteUrl +
           "&text=" + siteMetadata.title + ": " + siteMetadata.longDescription +
@@ -45,6 +48,7 @@ const Header = ({ siteMetadata }) => (
           <FaTwitterSquare />
         </a>
         <a
+          onClick={() => onLinkClick('facebook')}
           className={'icon'}
           href={ "https://www.facebook.com/sharer/sharer.php?u=" + siteMetadata.siteUrl +
           "&quote=" + siteMetadata.title + ": " + siteMetadata.longDescription + " " + siteMetadata.siteUrl }
@@ -54,6 +58,7 @@ const Header = ({ siteMetadata }) => (
           <FaFacebookSquare />
         </a>
         <a
+          onClick={() => onLinkClick('email')}
           className={'icon'}
           href={ "mailto:?subject=" + siteMetadata.title +
           "&body=" + siteMetadata.title + ": " + siteMetadata.longDescription + " " + siteMetadata.siteUrl }
