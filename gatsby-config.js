@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Awesome bioRxiv`,
     description: `Daily highly accessed bioRxiv articles`,
-    longDescription: `Daily highly accessed bioRxiv articles with RSS feed`,
+    longDescription: `Daily feed of highly accessed bioRxiv articles from categories: bioinformatics, cancer and molecular biology, clinical trials, pharmacology, systems biology`,
     author: `Augustin Luna`,
     siteUrl: `https://biorxiv.lunean.com`,
     siteImage: `awesome_biorxiv_lunean.png`,

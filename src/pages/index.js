@@ -80,7 +80,7 @@ const IndexPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`biorxiv`, `bioinformatics`, `systems biology`, `cancer biology`]} />
+      <SEO title="Daily highly accessed bioRxiv articles" keywords={[`biorxiv`, `rss`, `daily`, `feed`, `bioinformatics`, `systems biology`, `cancer biology`]} />
       {
         <Papers items={items} />
       }
