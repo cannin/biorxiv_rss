@@ -76,7 +76,7 @@ const IndexPage = (props) => {
   }
 
   //items = [];
-  //console.log(items.length);
+  console.log(items.length);
 
   return (
     <Layout>
